@@ -14,7 +14,16 @@ return {
             close_if_last_window = true,
             window = {
                 width = 30
+            },
+            filesystem = {
+                filtered_items = {
+                    hide_by_name = {
+                        "__pycache__",
+                    }
+                }
             }
         }
+        vim.keymap.set("n", "\\", ":Neotree toggle<cr>")
+        vim.keymap.set("n", "<leader>gs", ":Neotree float git_status<cr>")
     end,
 }
